@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_login">Вход</string>
+    <string name="label_email">Email</string>
+    <string name="hint_email">example@gmail.com</string>
+    <string name="label_password">Пароль</string>
+    <string name="hint_password">Введите пароль</string>
+    
+    <string name="btn_login">Вход</string>
+    <string name="action_no_account">Нету аккаунта\? </string>
+    <string name="action_register">Регистрация</string>
+    <string name="action_forgot_password">Забыл пароль</string>
+    
+    <string name="desc_login_vk">Войти через ВКонтакте</string>
+    <string name="desc_login_ok">Войти через Одноклассники</string>
+</resources>

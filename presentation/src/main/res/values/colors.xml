@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark">#151515</color>
+    <color name="tf_background">#32333A</color>
+    
+    <color name="text_primary">#F2F2F3</color>
+    <color name="text_hint">#808080</color>
+    
+    <color name="btn_primary">#12B956</color>
+    <color name="btn_vk">#2683ED</color>
+    <color name="divider_color">#4D555E</color>
+</resources>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <TextView
+        android:id="@+id/Title_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_top_title"
+        android:text="@string/title_login"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_title"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Email_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_top_label"
+        android:text="@string/label_email"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_label"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Title_tv" />
+
+    <EditText
+        android:id="@+id/EmailTextField_et"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tf_height"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_top_tf"
+        android:background="@drawable/bg_text_field"
+        android:paddingHorizontal="@dimen/tf_padding_horizontal"
+        android:hint="@string/hint_email"
+        android:textColorHint="@color/text_hint"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_input"
+        android:inputType="textEmailAddress"
+        android:autofillHints="emailAddress"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Email_tv" />
+
+    <TextView
+        android:id="@+id/Password_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_between_label"
+        android:text="@string/label_password"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_label"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EmailTextField_et" />
+
+    <EditText
+        android:id="@+id/PasswordTextField_et"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tf_height"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_top_tf"
+        android:background="@drawable/bg_text_field"
+        android:paddingHorizontal="@dimen/tf_padding_horizontal"
+        android:hint="@string/hint_password"
+        android:textColorHint="@color/text_hint"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_input"
+        android:inputType="textPassword"
+        android:autofillHints="password"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Password_tv" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/AuthButton_btn"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tf_height"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_top_auth_btn"
+        android:background="@drawable/bg_btn_auth"
+        android:text="@string/btn_login"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:padding="0dp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PasswordTextField_et" />
+
+    <LinearLayout
+        android:id="@+id/Actions_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_top_actions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AuthButton_btn">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_no_account"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_action"
+                android:fontFamily="@font/roboto_semibold" />
+
+            <TextView
+                android:id="@+id/ActionRegister_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/action_register"
+                android:textColor="@color/btn_primary"
+                android:textSize="@dimen/text_action"
+                android:fontFamily="@font/roboto_semibold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ActionForgotPassword_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gap_actions"
+            android:text="@string/action_forgot_password"
+            android:textColor="@color/btn_primary"
+            android:textSize="@dimen/text_action"
+            android:fontFamily="@font/roboto_semibold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/Divider_v"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_top_divider"
+        android:background="@color/divider_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Actions_ll" />
+
+    <LinearLayout
+        android:id="@+id/SocialMedia_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_top_social"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Divider_v">
+
+        <ImageButton
+            android:id="@+id/ButtonVk_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/tf_height"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_btn_vk"
+            android:src="@drawable/ic_vk"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/desc_login_vk" />
+
+        <ImageButton
+            android:id="@+id/ButtonOk_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/tf_height"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_btn_ok"
+            android:src="@drawable/ic_ok"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/desc_login_ok" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
