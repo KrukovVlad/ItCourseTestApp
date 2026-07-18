@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/MainContainer_fcv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/BottomNavDivider_v"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/BottomNavDivider_v"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/divider_color"
+        app:layout_constraintBottom_toTopOf="@id/BottomNavigation_ll" />
+
+    <LinearLayout
+        android:id="@+id/BottomNavigation_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_bottom_nav"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:paddingBottom="@dimen/nav_system_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/NavMain_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/nav_item_padding_top"
+            android:paddingBottom="@dimen/nav_item_padding_bottom"
+            android:layout_marginEnd="@dimen/nav_item_gap"
+            android:clickable="true"
+            android:focusable="true">
+
+            <FrameLayout
+                android:layout_width="@dimen/nav_indicator_width"
+                android:layout_height="@dimen/nav_indicator_height"
+                android:background="@drawable/bg_nav_indicator"
+                android:duplicateParentState="true">
+                <ImageView
+                    android:layout_width="@dimen/nav_icon_size"
+                    android:layout_height="@dimen/nav_icon_size"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_home"
+                    android:contentDescription="@string/cd_nav_main"
+                    android:duplicateParentState="true"
+                    app:tint="@color/selector_bottom_nav" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/nav_text_margin_top"
+                android:text="@string/nav_main"
+                android:duplicateParentState="true"
+                android:textColor="@color/selector_bottom_nav"
+                android:textSize="@dimen/nav_text_size"
+                android:fontFamily="@font/roboto_semibold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/NavFavorites_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/nav_item_padding_top"
+            android:paddingBottom="@dimen/nav_item_padding_bottom"
+            android:layout_marginStart="@dimen/nav_item_gap"
+            android:layout_marginEnd="@dimen/nav_item_gap"
+            android:clickable="true"
+            android:focusable="true">
+
+            <FrameLayout
+                android:layout_width="@dimen/nav_indicator_width"
+                android:layout_height="@dimen/nav_indicator_height"
+                android:background="@drawable/bg_nav_indicator"
+                android:duplicateParentState="true">
+                <ImageView
+                    android:layout_width="@dimen/nav_icon_size"
+                    android:layout_height="@dimen/nav_icon_size"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_favorites"
+                    android:contentDescription="@string/cd_nav_favorites"
+                    android:duplicateParentState="true"
+                    app:tint="@color/selector_bottom_nav" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/nav_text_margin_top"
+                android:text="@string/nav_favorites"
+                android:duplicateParentState="true"
+                android:textColor="@color/selector_bottom_nav"
+                android:textSize="@dimen/nav_text_size"
+                android:fontFamily="@font/roboto_semibold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/NavAccount_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/nav_item_padding_top"
+            android:paddingBottom="@dimen/nav_item_padding_bottom"
+            android:layout_marginStart="@dimen/nav_item_gap"
+            android:clickable="true"
+            android:focusable="true">
+
+            <FrameLayout
+                android:layout_width="@dimen/nav_indicator_width"
+                android:layout_height="@dimen/nav_indicator_height"
+                android:background="@drawable/bg_nav_indicator"
+                android:duplicateParentState="true">
+                <ImageView
+                    android:layout_width="@dimen/nav_icon_size"
+                    android:layout_height="@dimen/nav_icon_size"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_account"
+                    android:contentDescription="@string/cd_nav_account"
+                    android:duplicateParentState="true"
+                    app:tint="@color/selector_bottom_nav" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/nav_text_margin_top"
+                android:text="@string/nav_account"
+                android:duplicateParentState="true"
+                android:textColor="@color/selector_bottom_nav"
+                android:textSize="@dimen/nav_text_size"
+                android:fontFamily="@font/roboto_semibold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

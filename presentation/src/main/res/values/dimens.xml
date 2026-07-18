@@ -21,4 +21,15 @@
     <dimen name="margin_top_social">32dp</dimen>
     <dimen name="divider_height">1dp</dimen>
     <dimen name="text_action">12sp</dimen>
+    
+    <dimen name="nav_system_padding">26dp</dimen>
+    <dimen name="nav_item_padding_top">12dp</dimen>
+    <dimen name="nav_item_padding_bottom">16dp</dimen>
+    <dimen name="nav_icon_size">24dp</dimen>
+    <dimen name="nav_text_margin_top">4dp</dimen>
+    <dimen name="nav_indicator_width">64dp</dimen>
+    <dimen name="nav_indicator_height">32dp</dimen>
+    <dimen name="nav_indicator_radius">16dp</dimen>
+    <dimen name="nav_item_gap">8dp</dimen>
+    <dimen name="nav_text_size">12sp</dimen>
 </resources>
