@@ -18,7 +18,18 @@
     <string name="nav_favorites">Избранное</string>
     <string name="nav_account">Аккаунт</string>
     
-    <string name="cd_nav_main">Вкладка Главная</string>
-    <string name="cd_nav_favorites">Вкладка Избранное</string>
-    <string name="cd_nav_account">Вкладка Аккаунт</string>
+    <string name="cd_nav_main">Иконка вкладки Главная</string>
+    <string name="cd_nav_favorites">Иконка вкладки Избранное</string>
+    <string name="cd_nav_account">Иконка вкладки Аккаунт</string>
+    
+    <string name="hint_search">Search courses…</string>
+    <string name="cd_search">Иконка поиска</string>
+    <string name="cd_filter">Иконка фильтра</string>
+    
+    <string name="sort_by_date">По дате добавления</string>
+    <string name="cd_sort">Сортировка</string>
+    
+    <string name="cd_bookmark">В закладки</string>
+    <string name="cd_star">Рейтинг</string>
+    <string name="action_more">Подробнее</string>
 </resources>

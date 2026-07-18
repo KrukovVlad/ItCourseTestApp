@@ -4,7 +4,7 @@
     android:exitFadeDuration="200">
     <item android:state_selected="true">
         <shape android:shape="rectangle">
-            <solid android:color="@color/nav_indicator_selected" />
+            <solid android:color="@color/light_gray" />
             <corners android:radius="@dimen/nav_indicator_radius" />
         </shape>
     </item>

@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Base.Theme.ItCourseTestApp" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="android:windowBackground">@color/bg_dark</item>
-        <item name="android:statusBarColor">@color/bg_dark</item>
-        <item name="android:navigationBarColor">@color/bg_bottom_nav</item>
-        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:windowBackground">@color/dark</item>
+        <item name="android:statusBarColor">@color/dark</item>
+        <item name="android:navigationBarColor">@color/dark_gray</item>
+        <item name="android:textColorPrimary">@color/white</item>
         <item name="android:windowLightStatusBar">false</item>
     </style>
 </resources>

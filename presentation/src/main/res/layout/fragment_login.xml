@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_dark">
+    android:background="@color/dark">
 
     <TextView
         android:id="@+id/Title_tv"
@@ -13,7 +13,7 @@
         android:layout_marginHorizontal="@dimen/margin_default"
         android:layout_marginTop="@dimen/margin_top_title"
         android:text="@string/title_login"
-        android:textColor="@color/text_primary"
+        android:textColor="@color/white"
         android:textSize="@dimen/text_title"
         android:fontFamily="@font/roboto_regular"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
         android:layout_marginHorizontal="@dimen/margin_default"
         android:layout_marginTop="@dimen/margin_top_label"
         android:text="@string/label_email"
-        android:textColor="@color/text_primary"
+        android:textColor="@color/white"
         android:textSize="@dimen/text_label"
         android:fontFamily="@font/roboto_medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@
         android:paddingHorizontal="@dimen/tf_padding_horizontal"
         android:hint="@string/hint_email"
         android:textColorHint="@color/text_hint"
-        android:textColor="@color/text_primary"
+        android:textColor="@color/white"
         android:textSize="@dimen/text_input"
         android:inputType="textEmailAddress"
         android:autofillHints="emailAddress"
@@ -60,7 +60,7 @@
         android:layout_marginHorizontal="@dimen/margin_default"
         android:layout_marginTop="@dimen/margin_between_label"
         android:text="@string/label_password"
-        android:textColor="@color/text_primary"
+        android:textColor="@color/white"
         android:textSize="@dimen/text_label"
         android:fontFamily="@font/roboto_medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +77,7 @@
         android:paddingHorizontal="@dimen/tf_padding_horizontal"
         android:hint="@string/hint_password"
         android:textColorHint="@color/text_hint"
-        android:textColor="@color/text_primary"
+        android:textColor="@color/white"
         android:textSize="@dimen/text_input"
         android:inputType="textPassword"
         android:autofillHints="password"
@@ -94,7 +94,7 @@
         android:layout_marginTop="@dimen/margin_top_auth_btn"
         android:background="@drawable/bg_btn_auth"
         android:text="@string/btn_login"
-        android:textColor="@color/text_primary"
+        android:textColor="@color/white"
         android:textSize="14sp"
         android:fontFamily="@font/roboto_medium"
         android:gravity="center"
@@ -124,7 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/action_no_account"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/white"
                 android:textSize="@dimen/text_action"
                 android:fontFamily="@font/roboto_semibold" />
 
@@ -134,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="@string/action_register"
-                android:textColor="@color/btn_primary"
+                android:textColor="@color/green"
                 android:textSize="@dimen/text_action"
                 android:fontFamily="@font/roboto_semibold" />
         </LinearLayout>
@@ -145,7 +145,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/gap_actions"
             android:text="@string/action_forgot_password"
-            android:textColor="@color/btn_primary"
+            android:textColor="@color/green"
             android:textSize="@dimen/text_action"
             android:fontFamily="@font/roboto_semibold" />
     </LinearLayout>
@@ -156,7 +156,7 @@
         android:layout_height="@dimen/divider_height"
         android:layout_marginHorizontal="@dimen/margin_default"
         android:layout_marginTop="@dimen/margin_top_divider"
-        android:background="@color/divider_color"
+        android:background="@color/stroke"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Actions_ll" />

@@ -42,4 +42,7 @@ dependencies {
 
     // Koin
     implementation(libs.koin.android)
+
+    // BlurView
+    implementation(libs.blurview)
 }

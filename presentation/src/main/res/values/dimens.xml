@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Login -->
     <dimen name="margin_default">16dp</dimen>
     <dimen name="margin_top_title">140dp</dimen>
     <dimen name="margin_top_label">28dp</dimen>
     <dimen name="margin_top_tf">8dp</dimen>
     <dimen name="margin_between_label">16dp</dimen>
-    
     <dimen name="text_title">28sp</dimen>
     <dimen name="text_label">16sp</dimen>
     <dimen name="text_input">16sp</dimen>
-    
     <dimen name="tf_height">40dp</dimen>
     <dimen name="tf_radius">30dp</dimen>
     <dimen name="tf_padding_horizontal">16dp</dimen>
-    
     <dimen name="margin_top_auth_btn">24dp</dimen>
     <dimen name="margin_top_actions">16dp</dimen>
     <dimen name="gap_actions">8dp</dimen>
@@ -21,7 +19,8 @@
     <dimen name="margin_top_social">32dp</dimen>
     <dimen name="divider_height">1dp</dimen>
     <dimen name="text_action">12sp</dimen>
-    
+
+    <!-- Nav Bar -->
     <dimen name="nav_system_padding">26dp</dimen>
     <dimen name="nav_item_padding_top">12dp</dimen>
     <dimen name="nav_item_padding_bottom">16dp</dimen>
@@ -30,6 +29,35 @@
     <dimen name="nav_indicator_width">64dp</dimen>
     <dimen name="nav_indicator_height">32dp</dimen>
     <dimen name="nav_indicator_radius">16dp</dimen>
-    <dimen name="nav_item_gap">8dp</dimen>
+    <dimen name="nav_item_gap">4dp</dimen>
     <dimen name="nav_text_size">12sp</dimen>
+    
+    <!-- Home Screen -->
+    <dimen name="margin_top_search">16dp</dimen>
+    <dimen name="search_height">56dp</dimen>
+    <dimen name="search_icon_container">48dp</dimen>
+    <dimen name="search_radius">28dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="sort_icon_size">16dp</dimen>
+    <dimen name="text_label_large">14sp</dimen>
+
+
+    <!-- Course Card -->
+    <dimen name="course_card_radius">16dp</dimen>
+    <dimen name="course_image_height">114dp</dimen>
+    <dimen name="course_title_size">16sp</dimen>
+    <dimen name="glass_pill_radius">12dp</dimen>
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="margin_medium">12dp</dimen>
+    <dimen name="margin_price_top">10dp</dimen>
+    <dimen name="bookmark_size">28dp</dimen>
+    <dimen name="bookmark_icon_size">16dp</dimen>
+    <dimen name="badge_height">22dp</dimen>
+    <dimen name="badge_padding_horizontal">6dp</dimen>
+    <dimen name="star_icon_size">12dp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="line_spacing_small">2sp</dimen>
+    <dimen name="line_spacing_medium">4sp</dimen>
+
 </resources>
