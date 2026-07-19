@@ -7,6 +7,7 @@
     <dimen name="margin_top_tf">8dp</dimen>
     <dimen name="margin_between_label">16dp</dimen>
     <dimen name="text_title">28sp</dimen>
+    <dimen name="text_title_large">22sp</dimen>
     <dimen name="text_label">16sp</dimen>
     <dimen name="text_input">16sp</dimen>
     <dimen name="tf_height">40dp</dimen>
