@@ -12,4 +12,5 @@
     
     <color name="dark_gray">#24252A</color>
     <color name="glass">#4D32333A</color>
+    <color name="skeleton_solid">#4DFFFFFF</color>
 </resources>

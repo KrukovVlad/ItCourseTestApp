@@ -33,11 +33,11 @@
             app:layout_constraintEnd_toEndOf="@id/CourseImage_iv">
             
             <ImageView
+                android:id="@+id/BookmarkIcon_iv"
                 android:layout_width="@dimen/bookmark_icon_size"
                 android:layout_height="@dimen/bookmark_icon_size"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_bookmark"
-                app:tint="@color/white"
                 android:contentDescription="@string/cd_bookmark" />
         </eightbitlab.com.blurview.BlurView>
 

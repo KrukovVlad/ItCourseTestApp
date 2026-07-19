@@ -61,4 +61,12 @@
     <dimen name="line_spacing_small">2sp</dimen>
     <dimen name="line_spacing_medium">4sp</dimen>
 
+    <!-- Skeleton Card -->
+    <dimen name="skeleton_title_width">200dp</dimen>
+    <dimen name="skeleton_title_height">20dp</dimen>
+    <dimen name="skeleton_desc_height">32dp</dimen>
+    <dimen name="skeleton_price_width">80dp</dimen>
+    <dimen name="skeleton_price_height">20dp</dimen>
+    <dimen name="skeleton_radius">8dp</dimen>
+
 </resources>

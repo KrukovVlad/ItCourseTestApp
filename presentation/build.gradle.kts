@@ -4,7 +4,9 @@ plugins {
 
 android {
     namespace = "com.example.itcoursetestapp.presentation"
-    compileSdk = 36
+    compileSdk {
+        version = release(37)
+    }
 
     defaultConfig {
         minSdk = 26
@@ -45,4 +47,7 @@ dependencies {
 
     // BlurView
     implementation(libs.blurview)
+
+    // Shimmer
+    implementation(libs.shimmer)
 }
