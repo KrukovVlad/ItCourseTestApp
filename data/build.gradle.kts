@@ -1,10 +1,13 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.ksp)
 }
 
 android {
     namespace = "com.example.itcoursetestapp.data"
-    compileSdk = 36
+    compileSdk {
+        version = release(37)
+    }
 
     defaultConfig {
         minSdk = 26
@@ -18,21 +21,25 @@ android {
 
 dependencies {
     implementation(project(":domain"))
-    
-    // Core
+    implementation(libs.koin.android)
     implementation(libs.androidx.core.ktx)
-    
-    // Coroutines
-    implementation(libs.coroutines.core)
-    
-    // Koin
-    implementation(libs.koin.core)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
     
     // Retrofit
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.gson)
     implementation(libs.okhttp.logging)
 
+    // Room
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
+
     // DataStore
     implementation(libs.datastore.preferences)
+
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 }

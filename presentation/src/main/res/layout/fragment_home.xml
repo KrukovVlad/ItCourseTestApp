@@ -24,7 +24,7 @@
             android:layout_width="@dimen/search_icon_container"
             android:layout_height="@dimen/search_icon_container"
             android:contentDescription="@string/cd_search"
-            android:padding="12dp"
+            android:padding="@dimen/margin_medium"
             android:src="@drawable/ic_search"
             app:tint="@color/white" />
 

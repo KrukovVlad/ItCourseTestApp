@@ -57,6 +57,13 @@ dependencies {
     // DataStore
     implementation(libs.datastore.preferences)
 
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+
+    // Room
+    implementation(libs.room.runtime)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
