@@ -1,6 +1,6 @@
-package com.example.itcoursetestapp.domain.auth
+package com.example.itcoursetestapp.domain.auth.validation
 
-import com.example.itcoursetestapp.domain.auth.exceptions.ValidationException
+import com.example.itcoursetestapp.domain.auth.validation.exceptions.ValidationException
 
 class ValidatePasswordUseCase {
     operator fun invoke(password: String) {

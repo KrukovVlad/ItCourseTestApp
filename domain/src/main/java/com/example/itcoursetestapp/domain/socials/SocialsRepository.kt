@@ -1,4 +1,4 @@
-package com.example.itcoursetestapp.domain.auth
+package com.example.itcoursetestapp.domain.socials
 
 interface SocialsRepository {
     suspend fun fetchVkUrl(): String

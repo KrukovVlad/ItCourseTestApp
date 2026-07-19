@@ -1,4 +1,4 @@
-package com.example.itcoursetestapp.data.auth
+package com.example.itcoursetestapp.data.socials
 
 class VkDataSource {
     suspend fun fetchUrl(): String = VK_URL
