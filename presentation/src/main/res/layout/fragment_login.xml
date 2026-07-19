@@ -47,6 +47,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/text_input"
         android:inputType="textEmailAddress"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@._-"
         android:autofillHints="emailAddress"
         android:fontFamily="@font/roboto_regular"
         app:layout_constraintEnd_toEndOf="parent"
