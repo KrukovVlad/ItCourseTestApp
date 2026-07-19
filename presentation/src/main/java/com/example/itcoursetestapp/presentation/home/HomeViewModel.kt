@@ -6,6 +6,7 @@ import com.example.itcoursetestapp.domain.home.Course
 import com.example.itcoursetestapp.domain.home.FetchCoursesUseCase
 import com.example.itcoursetestapp.domain.home.SyncCoursesUseCase
 import com.example.itcoursetestapp.domain.home.ToggleLikeUseCase
+import com.example.itcoursetestapp.domain.core.DispatcherProvider
 import com.example.itcoursetestapp.presentation.home.adapter.HomeListItem.CourseItem
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -17,7 +18,8 @@ import kotlinx.coroutines.launch
 class HomeViewModel(
     private val fetchCoursesUseCase: FetchCoursesUseCase,
     private val syncCoursesUseCase: SyncCoursesUseCase,
-    private val toggleLikeUseCase: ToggleLikeUseCase
+    private val toggleLikeUseCase: ToggleLikeUseCase,
+    private val dispatchers: DispatcherProvider
 ) : ViewModel() {
 
     private val _state = MutableStateFlow<HomeState>(HomeState.Loading)
@@ -30,7 +32,7 @@ class HomeViewModel(
     private var isSortedByDate = false
 
     init {
-        viewModelScope.launch {
+        viewModelScope.launch(dispatchers.io) {
             fetchCoursesUseCase().collect { courses ->
                 currentCourses = courses
                 updateState()
@@ -56,7 +58,7 @@ class HomeViewModel(
     }
 
     private fun refresh() {
-        viewModelScope.launch {
+        viewModelScope.launch(dispatchers.io) {
             val result = syncCoursesUseCase()
             result.exceptionOrNull()?.let {
                 if (currentCourses.isEmpty()) {
@@ -69,13 +71,13 @@ class HomeViewModel(
     fun toggleSort() {
         isSortedByDate = !isSortedByDate
         updateState()
-        viewModelScope.launch {
+        viewModelScope.launch(dispatchers.main) {
             _actions.emit(HomeAction.ScrollToTop)
         }
     }
     
     fun toggleLike(courseId: Int) {
-        viewModelScope.launch {
+        viewModelScope.launch(dispatchers.io) {
             toggleLikeUseCase(courseId)
         }
     }
