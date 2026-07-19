@@ -13,11 +13,7 @@
         app:layout_constraintBottom_toTopOf="@id/BottomNavDivider_v"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <include layout="@layout/fragment_home" />
-
-    </FrameLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/BottomNavDivider_v"
