@@ -1,4 +1,4 @@
-package com.example.itcoursetestapp.presentation.home
+package com.example.itcoursetestapp.presentation.favorites
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -7,32 +7,26 @@ import com.example.itcoursetestapp.domain.home.FetchCoursesUseCase
 import com.example.itcoursetestapp.domain.home.SyncCoursesUseCase
 import com.example.itcoursetestapp.domain.home.ToggleLikeUseCase
 import com.example.itcoursetestapp.presentation.home.adapter.HomeListItem.CourseItem
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 
-class HomeViewModel(
+class FavoritesViewModel(
     private val fetchCoursesUseCase: FetchCoursesUseCase,
     private val syncCoursesUseCase: SyncCoursesUseCase,
     private val toggleLikeUseCase: ToggleLikeUseCase
 ) : ViewModel() {
 
-    private val _state = MutableStateFlow<HomeState>(HomeState.Loading)
-    val state: StateFlow<HomeState> = _state.asStateFlow()
+    private val _state = MutableStateFlow<FavoritesState>(FavoritesState.Loading)
+    val state: StateFlow<FavoritesState> = _state.asStateFlow()
 
-    private val _actions = MutableSharedFlow<HomeAction>()
-    val actions = _actions.asSharedFlow()
-
-    private var currentCourses: List<Course> = emptyList()
-    private var isSortedByDate = false
+    private var currentFavoriteCourses: List<Course> = emptyList()
 
     init {
         viewModelScope.launch {
             fetchCoursesUseCase().collect { courses ->
-                currentCourses = courses
+                currentFavoriteCourses = courses.filter { it.hasLike }
                 updateState()
             }
         }
@@ -40,40 +34,26 @@ class HomeViewModel(
     }
 
     private fun updateState() {
-        if (currentCourses.isEmpty()) {
-            _state.value = HomeState.Loading
+        if (currentFavoriteCourses.isEmpty()) {
+            _state.value = FavoritesState.Success(emptyList())
             return
         }
 
-        val sortedCourses = if (isSortedByDate) {
-            currentCourses.sortedByDescending { it.publishDate }
-        } else {
-            currentCourses
-        }
-
-        val items = sortedCourses.map { CourseItem(it) }
-        _state.value = HomeState.Success(items)
+        val items = currentFavoriteCourses.map { CourseItem(it) }
+        _state.value = FavoritesState.Success(items)
     }
 
     private fun refresh() {
         viewModelScope.launch {
             val result = syncCoursesUseCase()
             result.exceptionOrNull()?.let {
-                if (currentCourses.isEmpty()) {
-                    _state.value = HomeState.Error(it.message ?: "Unknown error")
+                if (currentFavoriteCourses.isEmpty()) {
+                    _state.value = FavoritesState.Error(it.message ?: "Unknown error")
                 }
             }
         }
     }
 
-    fun toggleSort() {
-        isSortedByDate = !isSortedByDate
-        updateState()
-        viewModelScope.launch {
-            _actions.emit(HomeAction.ScrollToTop)
-        }
-    }
-    
     fun toggleLike(courseId: Int) {
         viewModelScope.launch {
             toggleLikeUseCase(courseId)
