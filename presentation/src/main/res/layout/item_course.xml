@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_default"
+    android:background="@drawable/bg_course_card"
+    android:paddingBottom="@dimen/margin_default">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/CourseImage_iv"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/course_image_height"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/backgrounds/scenic"
+            app:shapeAppearanceOverlay="@style/CourseImageShape"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/Bookmark_bv"
+            android:layout_width="@dimen/bookmark_size"
+            android:layout_height="@dimen/bookmark_size"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:background="@drawable/bg_glass_circle"
+            app:blurOverlayColor="@color/glass"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toTopOf="@id/CourseImage_iv"
+            app:layout_constraintEnd_toEndOf="@id/CourseImage_iv">
+            
+            <ImageView
+                android:id="@+id/BookmarkIcon_iv"
+                android:layout_width="@dimen/bookmark_icon_size"
+                android:layout_height="@dimen/bookmark_icon_size"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_bookmark"
+                android:contentDescription="@string/cd_bookmark" />
+        </eightbitlab.com.blurview.BlurView>
+
+        <LinearLayout
+            android:id="@+id/Badges_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="@id/CourseImage_iv"
+            app:layout_constraintBottom_toBottomOf="@id/CourseImage_iv">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/Rating_bv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/badge_height"
+                android:background="@drawable/bg_glass_pill"
+                app:blurOverlayColor="@color/glass">
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/badge_padding_horizontal"
+                    android:paddingEnd="@dimen/badge_padding_horizontal">
+                    
+                    <ImageView
+                        android:layout_width="@dimen/star_icon_size"
+                        android:layout_height="@dimen/star_icon_size"
+                        android:src="@drawable/ic_star"
+                        app:tint="@color/green"
+                        android:contentDescription="@string/cd_star" />
+                    
+                    <TextView
+                        android:id="@+id/Rating_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_tiny"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        android:fontFamily="@font/roboto_regular"
+                        android:includeFontPadding="false"
+                        tools:text="4.9" />
+                </LinearLayout>
+            </eightbitlab.com.blurview.BlurView>
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/Date_bv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/badge_height"
+                android:layout_marginStart="@dimen/margin_tiny"
+                android:background="@drawable/bg_glass_pill"
+                app:blurOverlayColor="@color/glass">
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/badge_padding_horizontal"
+                    android:paddingEnd="@dimen/badge_padding_horizontal">
+                    
+                    <TextView
+                        android:id="@+id/Date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        android:fontFamily="@font/roboto_regular"
+                        android:includeFontPadding="false"
+                        tools:text="22 Мая 2024" />
+                </LinearLayout>
+            </eightbitlab.com.blurview.BlurView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/CourseTitle_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/course_title_size"
+            android:fontFamily="@font/roboto_medium"
+            android:lineSpacingExtra="@dimen/line_spacing_small"
+            tools:text="Java-разработчик с нуля"
+            app:layout_constraintTop_toBottomOf="@id/CourseImage_iv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/CourseDesc_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_small"
+            android:fontFamily="@font/roboto_regular"
+            android:lineSpacingExtra="@dimen/line_spacing_medium"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="Освойте backend-разработку и программирование на Java, фреймворки Spring и Maven, работу с базами данных и API."
+            app:layout_constraintTop_toBottomOf="@id/CourseTitle_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/CoursePrice_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_price_top"
+            android:layout_marginStart="@dimen/margin_default"
+            android:textColor="@color/white"
+            android:textSize="@dimen/course_title_size"
+            android:fontFamily="@font/roboto_medium"
+            tools:text="999 ₽"
+            app:layout_constraintTop_toBottomOf="@id/CourseDesc_tv"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/More_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginEnd="@dimen/margin_medium"
+            app:layout_constraintBottom_toBottomOf="@id/CoursePrice_tv"
+            app:layout_constraintTop_toTopOf="@id/CoursePrice_tv"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_small"
+                android:fontFamily="@font/roboto_semibold"
+                android:text="@string/action_more" />
+
+            <ImageView
+                android:layout_width="@dimen/bookmark_icon_size"
+                android:layout_height="@dimen/bookmark_icon_size"
+                android:layout_marginStart="@dimen/margin_tiny"
+                android:src="@drawable/ic_arrow_right"
+                app:tint="@color/green"
+                android:contentDescription="@null" />
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

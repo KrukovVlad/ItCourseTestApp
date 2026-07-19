@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_login">Вход</string>
+    <string name="label_email">Email</string>
+    <string name="hint_email">example@gmail.com</string>
+    <string name="label_password">Пароль</string>
+    <string name="hint_password">Введите пароль</string>
+    
+    <string name="btn_login">Вход</string>
+    <string name="action_no_account">Нету аккаунта\? </string>
+    <string name="action_register">Регистрация</string>
+    <string name="action_forgot_password">Забыл пароль</string>
+    
+    <string name="desc_login_vk">Войти через ВКонтакте</string>
+    <string name="desc_login_ok">Войти через Одноклассники</string>
+    
+    <string name="nav_main">Главная</string>
+    <string name="nav_favorites">Избранное</string>
+    <string name="nav_account">Аккаунт</string>
+    
+    <string name="cd_nav_main">Иконка вкладки Главная</string>
+    <string name="cd_nav_favorites">Иконка вкладки Избранное</string>
+    <string name="cd_nav_account">Иконка вкладки Аккаунт</string>
+    
+    <string name="hint_search">Search courses…</string>
+    <string name="cd_search">Иконка поиска</string>
+    <string name="cd_filter">Иконка фильтра</string>
+    
+    <string name="sort_by_date">По дате добавления</string>
+    <string name="cd_sort">Сортировка</string>
+    
+    <string name="cd_bookmark">В закладки</string>
+    <string name="cd_star">Рейтинг</string>
+    <string name="action_more">Подробнее</string>
+    <string name="course_price">%1$s ₽</string>
+</resources>
