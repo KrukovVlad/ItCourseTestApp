@@ -1,4 +1,4 @@
-package com.example.itcoursetestapp.domain.auth
+package com.example.itcoursetestapp.domain.socials
 
 class FetchVkUrlUseCase(private val repository: SocialsRepository) {
     suspend operator fun invoke(): String {

@@ -1,8 +1,8 @@
-package com.example.itcoursetestapp.presentation.auth
+package com.example.itcoursetestapp.presentation.core.browser
 
 import android.content.Context
 import android.content.Intent
-import com.example.itcoursetestapp.domain.auth.BrowserOpener
+import com.example.itcoursetestapp.domain.core.browser.BrowserOpener
 import androidx.core.net.toUri
 
 class BrowserOpenerImpl(private val context: Context) : BrowserOpener {

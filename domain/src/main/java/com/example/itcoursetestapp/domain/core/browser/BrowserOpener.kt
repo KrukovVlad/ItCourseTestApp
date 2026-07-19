@@ -1,4 +1,4 @@
-package com.example.itcoursetestapp.domain.auth
+package com.example.itcoursetestapp.domain.core.browser
 
 interface BrowserOpener {
     fun openUrl(url: String)

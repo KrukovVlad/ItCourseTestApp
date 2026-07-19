@@ -1,6 +1,6 @@
-package com.example.itcoursetestapp.data.auth
+package com.example.itcoursetestapp.data.socials
 
-import com.example.itcoursetestapp.domain.auth.SocialsRepository
+import com.example.itcoursetestapp.domain.socials.SocialsRepository
 
 class SocialsRepositoryImpl(
     private val vkDataSource: VkDataSource,

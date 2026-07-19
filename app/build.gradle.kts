@@ -51,6 +51,12 @@ dependencies {
     // Koin
     implementation(libs.koin.android)
 
+    // Splashscreen
+    implementation(libs.core.splashscreen)
+
+    // DataStore
+    implementation(libs.datastore.preferences)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

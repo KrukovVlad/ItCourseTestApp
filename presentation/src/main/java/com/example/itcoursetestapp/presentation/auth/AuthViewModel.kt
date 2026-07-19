@@ -2,12 +2,13 @@ package com.example.itcoursetestapp.presentation.auth
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.itcoursetestapp.domain.auth.BrowserOpener
-import com.example.itcoursetestapp.domain.auth.FetchOkUrlUseCase
-import com.example.itcoursetestapp.domain.auth.FetchVkUrlUseCase
-import com.example.itcoursetestapp.domain.auth.ValidateEmailUseCase
-import com.example.itcoursetestapp.domain.auth.ValidatePasswordUseCase
-import com.example.itcoursetestapp.domain.auth.exceptions.ValidationException
+import com.example.itcoursetestapp.domain.core.browser.BrowserOpener
+import com.example.itcoursetestapp.domain.socials.FetchOkUrlUseCase
+import com.example.itcoursetestapp.domain.socials.FetchVkUrlUseCase
+import com.example.itcoursetestapp.domain.auth.session.SaveUserSessionUseCase
+import com.example.itcoursetestapp.domain.auth.validation.ValidateEmailUseCase
+import com.example.itcoursetestapp.domain.auth.validation.ValidatePasswordUseCase
+import com.example.itcoursetestapp.domain.auth.validation.exceptions.ValidationException
 import com.example.itcoursetestapp.domain.core.DispatcherProvider
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -22,6 +23,7 @@ class AuthViewModel(
     private val fetchOkUrlUseCase: FetchOkUrlUseCase,
     private val validateEmailUseCase: ValidateEmailUseCase,
     private val validatePasswordUseCase: ValidatePasswordUseCase,
+    private val saveUserSessionUseCase: SaveUserSessionUseCase,
     private val browserOpener: BrowserOpener,
     private val dispatchers: DispatcherProvider
 ) : ViewModel() {
@@ -54,10 +56,12 @@ class AuthViewModel(
     }
 
     fun onLoginClicked() {
-        if (_state.value is AuthState.Valid) {
-            viewModelScope.launch(dispatchers.main) {
-                _events.emit(AuthEvent.NavigateToMain)
-            }
+        val currentState = _state.value
+        viewModelScope.launch(dispatchers.main) {
+            launch(dispatchers.io) {
+                saveUserSessionUseCase(currentState.email)
+            }.join()
+            _events.emit(AuthEvent.NavigateToMain)
         }
     }
 

@@ -1,4 +1,4 @@
-package com.example.itcoursetestapp.domain.auth.exceptions
+package com.example.itcoursetestapp.domain.auth.validation.exceptions
 
 import com.example.itcoursetestapp.domain.core.exceptions.DomainException
 

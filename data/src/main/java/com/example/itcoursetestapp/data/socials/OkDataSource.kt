@@ -1,4 +1,4 @@
-package com.example.itcoursetestapp.data.auth
+package com.example.itcoursetestapp.data.socials
 
 class OkDataSource {
     suspend fun fetchUrl(): String = OK_URL
